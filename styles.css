@@ -623,18 +623,18 @@ section { padding: 5rem 2rem; }
   margin: 0 auto;
   text-align: center;
 }
-.signup-section .section-label { color: var(--sky); }
+.signup-section .section-label { color: #b8e8ff; }
 .signup-section .section-title { color: var(--white); }
-.signup-section .section-title em { color: var(--sky); }
+.signup-section .section-title em { color: #b8e8ff; }
 .signup-desc {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.82);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 2rem;
 }
 .signup-note {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
   margin-top: 1rem;
   line-height: 1.6;
 }

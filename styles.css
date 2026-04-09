@@ -122,9 +122,9 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255,107,0,0.15);
-  border: 1px solid rgba(255,107,0,0.4);
-  color: #ffb380;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: var(--near-black);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -452,11 +452,36 @@ section { padding: 5rem 2rem; }
   align-items: start;
 }
 @media (max-width: 768px) { .explainer-body { grid-template-columns: 1fr; } }
+.explainer-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 .explainer-text p {
   font-size: 1rem;
   color: #555;
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+.director-quote {
+  margin: 1.25rem 0 0;
+  padding: 1.25rem 1.25rem 1.1rem;
+  border-left: 4px solid var(--orange);
+  background: rgba(18,84,202,0.06);
+  border-radius: 10px;
+}
+.director-quote blockquote {
+  margin: 0;
+}
+.director-quote blockquote p {
+  margin: 0;
+  color: var(--near-black);
+  font-style: italic;
+}
+.director-quote figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: rgba(40,40,41,0.7);
 }
 .eligibility-card {
   background: var(--blue);
@@ -670,23 +695,14 @@ section { padding: 5rem 2rem; }
   box-shadow: 0 4px 24px rgba(0,0,0,0.1);
   height: 320px;
   background: var(--gray-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.75rem;
-  color: #888;
-  font-size: 0.9rem;
-  border: 2px dashed rgba(18,84,202,0.2);
+  border: 1px solid rgba(0,0,0,0.08);
 }
-.map-embed-icon { font-size: 2rem; }
-.map-embed a {
-  color: var(--blue);
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 0.85rem;
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
-.map-embed a:hover { text-decoration: underline; }
 .address-block h3 {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -712,67 +728,58 @@ section { padding: 5rem 2rem; }
   line-height: 1.5;
 }
 .address-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
-.directions-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  background: var(--blue);
-  color: var(--white);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-.directions-btn:hover { background: var(--blue-dark); }
 
-/* ── PARTNERS ── */
-.partners-section { background: var(--gray-light); }
-.partners-grid {
+/* ── FUNDING THANKS ── */
+.funders-section { background: var(--gray-light); }
+.funders-section .section-intro { margin-bottom: 2rem; }
+.funders-grid {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-.partner-card {
+.funder-card {
   background: var(--white);
-  border-radius: 8px;
-  padding: 1.25rem 2rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--near-black);
-  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(0,0,0,0.08);
   flex: 1;
-  min-width: 180px;
+  min-width: 220px;
   text-align: center;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s;
 }
-.partner-card:hover { box-shadow: 0 4px 16px rgba(18,84,202,0.1); transform: translateY(-2px); }
-.partner-logo {
-  display: block;
-  max-height: 56px;
-  max-width: 160px;
-  width: auto;
-  margin: 0 auto 0.6rem;
-  object-fit: contain;
-}
-.wyoming-card {
-  background: var(--near-black);
-  color: rgba(255,255,255,0.85);
-  border: 1px solid rgba(255,255,255,0.1);
-}
-.wyoming-card:hover { box-shadow: 0 4px 16px rgba(119,195,247,0.15); }
-.partner-label {
+.funder-card:hover { box-shadow: 0 6px 20px rgba(18,84,202,0.08); }
+.funder-label {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--teal);
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.65rem;
 }
-.wyoming-card .partner-label { color: var(--sky); }
+.funder-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--near-black);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+.funder-thanks {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+.funder-logo {
+  display: block;
+  max-height: 64px;
+  max-width: 180px;
+  width: auto;
+  margin: 0 auto 0.85rem;
+  object-fit: contain;
+}
 
 /* ── FOOTER ── */
 footer {

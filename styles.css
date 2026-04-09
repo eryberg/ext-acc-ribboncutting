@@ -5,7 +5,7 @@
   --gray-light: #e5e1e6;
   --white: #ffffff;
   --orange: #ff6b00;
-  --teal: #00819a;
+  --teal: #006578;
   --sky: #77c3f7;
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Poppins', system-ui, sans-serif;
@@ -673,8 +673,8 @@ section { padding: 5rem 2rem; }
 .signup-btn:hover { background: #e55f00; }
 .signup-success {
   display: none;
-  background: rgba(0,129,154,0.2);
-  border: 1px solid rgba(0,129,154,0.5);
+  background: rgba(0,101,120,0.2);
+  border: 1px solid rgba(0,101,120,0.5);
   border-radius: 8px;
   padding: 1.5rem;
   color: #7de8f7;

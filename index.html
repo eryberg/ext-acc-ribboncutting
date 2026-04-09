@@ -285,13 +285,9 @@
     <div class="signup-inner">
       <p class="section-label reveal">Stay In the Loop</p>
       <h2 class="section-title reveal reveal-delay-1">Get a <em>Reminder</em><br>About the Event</h2>
-      <p class="signup-desc reveal reveal-delay-2">Enter your email and we'll send you a reminder before the May 4th public launch party at Wyoming Area Library.</p>
-      <div class="signup-form reveal reveal-delay-3" id="signup-form-wrap">
-        <input type="email" class="signup-input" id="signup-email" placeholder="your@email.com" aria-label="Email address">
-        <button class="signup-btn" onclick="handleSignup()">Remind Me</button>
-      </div>
-      <div class="signup-success" id="signup-success">
-        ✓ &nbsp;You're on the list! We'll remind you before the event on May 4th, 2026.
+      <p class="signup-desc reveal reveal-delay-2">Click <strong>Remind Me</strong> to open a Microsoft Form in a new tab. Complete the form to sign up for a reminder before the May 4th public launch party at Wyoming Area Library.</p>
+      <div class="signup-form reveal reveal-delay-3">
+        <button type="button" class="signup-btn" id="reminder-form-btn">Remind Me</button>
       </div>
       <p class="signup-note reveal">Email addresses will be used only to send a reminder about this event and will be stored securely by a third-party service until they are deleted after the event.</p>
     </div>
@@ -411,21 +407,15 @@
     }
   }
 
-  // Email Signup
-  function handleSignup() {
-    const email = document.getElementById('signup-email').value.trim();
-    if (!email || !email.includes('@')) {
-      document.getElementById('signup-email').style.borderColor = '#ff6b00';
-      setTimeout(() => document.getElementById('signup-email').style.borderColor = '', 1500);
-      return;
-    }
-    document.getElementById('signup-form-wrap').style.display = 'none';
-    document.getElementById('signup-success').style.display = 'block';
-  }
+  // Reminder: paste your Microsoft Form URL when ready (opens in a new tab)
+  const REMINDER_FORM_URL = '';
 
-  // Allow Enter key on signup
-  document.getElementById('signup-email').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') handleSignup();
+  document.getElementById('reminder-form-btn').addEventListener('click', function() {
+    if (REMINDER_FORM_URL) {
+      window.open(REMINDER_FORM_URL, '_blank', 'noopener,noreferrer');
+    } else {
+      console.warn('Set REMINDER_FORM_URL to your Microsoft Form link.');
+    }
   });
 
   // Scroll Reveal

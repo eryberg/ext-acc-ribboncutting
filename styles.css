@@ -593,6 +593,8 @@ section { padding: 5rem 2rem; }
   line-height: 1.75;
   border-top: 1px solid var(--gray-light);
 }
+.faq-a p { margin: 0 0 0.9rem; }
+.faq-a p:last-child { margin-bottom: 0; }
 .faq-a.open { display: block; }
 
 /* ── EMAIL SIGNUP ── */

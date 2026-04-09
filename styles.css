@@ -806,6 +806,11 @@ footer .footer-logo img {
   filter: none;
   opacity: 1;
 }
+footer .footer-copyright {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #cbcbcd;
+}
 
 /* ── SCROLL ANIMATIONS ── */
 .reveal {

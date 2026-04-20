@@ -645,6 +645,7 @@ section { padding: 5rem 2rem; }
   margin: 0 auto;
 }
 .signup-btn {
+  display: inline-block;
   background: var(--orange);
   color: var(--near-black);
   font-family: var(--font-body);
@@ -655,6 +656,7 @@ section { padding: 5rem 2rem; }
   padding: 0.85rem 1.75rem;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
   transition: background 0.2s;
 }
 .signup-btn:hover { background: #e55f00; }

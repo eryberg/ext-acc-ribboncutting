@@ -287,7 +287,12 @@
       <h2 class="section-title reveal reveal-delay-1">Get a <em>Reminder</em><br>About the Event</h2>
       <p class="signup-desc reveal reveal-delay-2">Click <strong>Remind Me</strong> to open a Microsoft Form in a new tab. Complete the form to sign up for a reminder before the May 4th public launch party at Wyoming Area Library.</p>
       <div class="signup-form reveal reveal-delay-3">
-        <button type="button" class="signup-btn" id="reminder-form-btn">Remind Me</button>
+        <a
+          href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v7_W7HzwYkGgbktmpP-eCUZ0fHjikC5KgUvbJL5LjvFUOTlPUkw0TEVUNVYxUDA4V1o1QUlOSVJJMC4u"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="signup-btn reminder-button"
+        >Remind Me</a>
       </div>
       <p class="signup-note reveal">Email addresses will be used only to send a reminder about this event and will be stored securely by a third-party service until they are deleted after the event.</p>
     </div>
@@ -406,17 +411,6 @@
       answer.classList.add('open');
     }
   }
-
-  // Reminder: paste your Microsoft Form URL when ready (opens in a new tab)
-  const REMINDER_FORM_URL = '';
-
-  document.getElementById('reminder-form-btn').addEventListener('click', function() {
-    if (REMINDER_FORM_URL) {
-      window.open(REMINDER_FORM_URL, '_blank', 'noopener,noreferrer');
-    } else {
-      console.warn('Set REMINDER_FORM_URL to your Microsoft Form link.');
-    }
-  });
 
   // Scroll Reveal
   const reveals = document.querySelectorAll('.reveal');
